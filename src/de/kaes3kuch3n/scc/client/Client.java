@@ -57,18 +57,17 @@ class Client {
                 do {
                     messageToSend = scanner.nextLine();
                     sendMessage(messageToSend);
-                } while (!messageToSend.equals("quit"));
+                } while (!messageToSend.equals("/quit"));
             }
         }.start();
 
         while ((message = input.readLine()) != null) {
-            System.out.println("Server: " + message);
+            System.out.println(message);
         }
     }
 
     private void sendMessage(String message) {
         output.println(message);
-        System.out.println("Client: " + message);
     }
 
     private void closeConnection() throws IOException {
