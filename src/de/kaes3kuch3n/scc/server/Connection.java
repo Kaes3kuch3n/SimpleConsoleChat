@@ -35,6 +35,7 @@ class Connection extends Thread {
         }
     }
 
+    // Setting up streams and registering connection
     private void setupConnection() throws IOException {
         output = new PrintWriter(connection.getOutputStream(), true);
         server.addConnection(output);
